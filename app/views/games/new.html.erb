@@ -1,0 +1,8 @@
+<h1>New Game</h1>
+<p><%= @random %></p>
+<form action="/score" method="post">
+  <input type="text" name="word">
+  <%= hidden_field_tag 'token', @randomarr %>
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
